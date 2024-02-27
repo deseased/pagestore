@@ -1,0 +1,29 @@
+.loader {
+    margin: 0 auto;
+    height: 100мр;
+    font-weight: 700;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #000;
+    box-sizing: border-box;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.1) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }

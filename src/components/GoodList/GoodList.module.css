@@ -1,0 +1,67 @@
+.goods {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goods__list {
+  margin: 0 auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+.goods__inputWrapper {
+  margin: 0 auto;
+  width: 50%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods__input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px black solid;
+}
+
+.goods__buttons {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.goods__button {
+  border: .3px black solid;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 12px 60px;
+  height: 4rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .goods__list {
+    grid-template-columns: auto;
+  }
+
+  .goods__buttons {
+    padding: 6px;
+    gap: 8px;
+  }
+
+  .goods__button {
+    padding: 8px;
+  }
+}
