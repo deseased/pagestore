@@ -54,7 +54,9 @@ const GoodsList: FC = () => {
   }
   // функция переключения страницы
   const handlePageChange = (page: number) => {
-    setPage(page);
+    if (page >= 1 && page <= totalPages && filteredGoods.length > 0) {
+      setPage(page);
+    }
   };
 
   if (loading) {
@@ -86,7 +88,7 @@ const GoodsList: FC = () => {
           type="button"
           className={styles.goods__button}
           onClick={() => handlePageChange(page - 1)}
-          disabled={page === 1}
+          disabled={page === totalPages}
         >
 
           Предыдущая страница
