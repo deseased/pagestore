@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ChangeEvent, FC, useEffect, useState } from "react";
-import styles from './GoodList.module.css';
+import styles from './GList.module.css';
 import { getGoods } from "../api/api";
-import Good from "../Good/Good";
+import Good from "../Good/List";
 import { TItem } from "../../utils/types";
 import Loader from "../Loader/Loader";
 import { getUnique } from "../../utils/additional";
@@ -43,12 +43,12 @@ const GoodsList: FC = () => {
     setTotalPages(Math.ceil(filtered.length / 50));
     setPage(1);
   };
-  // хэндлер для фильтрации
+  // фильтрация
   const handleFilterGoods = (evt: ChangeEvent<HTMLInputElement>) => {
     setSearchString(evt.target.value);
     filterGoods(evt.target.value);
   };
-  // функция пагинации
+  // пагинация
   const setPagination = (array: TItem[], length: number, pageNumber: number) => {
     return array.slice((pageNumber - 1) * length, pageNumber * length);
   }

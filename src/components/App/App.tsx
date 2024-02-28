@@ -1,4 +1,4 @@
-import GoodList from '../GoodList/GoodList';
+import GoodList from '../GoodList/GList';
 import styles from './App.module.css';
 
 function App() {

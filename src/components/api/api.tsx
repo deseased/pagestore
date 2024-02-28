@@ -33,7 +33,7 @@ export const fetchData = async () => {
     console.log(e);
   }
 };
-// функция получения товаров с разбиением по 100 шт в запросе
+// функция получения товаров по 100 шт в запросе
 export const getGoods = async () => {
     const ids = await fetchData();
     const slicedArray = sliceIdArray(ids, 100);
